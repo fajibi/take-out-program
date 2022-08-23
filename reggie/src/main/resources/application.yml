@@ -1,0 +1,37 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: reggie_take_out
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://127.0.0.1:3306/reggie?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true
+      username: root
+      password: 773955
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 50MB
+  #邮件发送
+  mail:
+    password: kffefaqepgbkhehb
+    username: 1207081949@qq.com
+    host: smtp.qq.com
+  #开启加密验证
+  couchbase:
+    env:
+      ssl:
+        enabled: true
+mybatis-plus:
+  configuration:
+    #在映射实体或者属性时，将数据库中表名和字段名中的下划线去掉，按照驼峰命名法映射
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      id-type: ASSIGN_ID
+reggie:
+  path: D:\tupian\
+
+
